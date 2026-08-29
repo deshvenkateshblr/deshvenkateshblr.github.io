@@ -101,11 +101,14 @@
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
       position: relative;
       overflow: hidden;
+      text-decoration: none;
+      color: inherit;
     }
 
     .card.live {
       border-color: rgba(61, 214, 140, 0.35);
       background: linear-gradient(145deg, var(--surface) 0%, rgba(61, 214, 140, 0.06) 100%);
+      cursor: pointer;
     }
 
     .card.live:hover {
@@ -144,6 +147,14 @@
       font-size: 1.5rem;
       margin-bottom: 1.1rem;
       background: var(--accent-dim);
+      overflow: hidden;
+    }
+
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
     }
 
     .card.disabled .card-icon {
@@ -199,7 +210,6 @@
       gap: 0.4rem;
       font-size: 0.9rem;
       font-weight: 600;
-      text-decoration: none;
       color: var(--accent);
       transition: gap 0.2s ease;
     }
@@ -210,7 +220,6 @@
 
     .card.disabled .card-action {
       color: var(--disabled);
-      pointer-events: none;
     }
 
     .privacy-note {
@@ -258,20 +267,23 @@
     </header>
 
     <div class="grid">
+
       <!-- KYH — Live -->
-      <article class="card live">
+      <a class="card live" href="https://deshvenkateshblr.github.io/3DHealth/" target="_blank" rel="noopener">
         <span class="card-badge badge-live">Live</span>
-        <div class="card-icon" aria-hidden="true">❤️</div>
+        <div class="card-icon">
+          <img src="https://deshvenkateshblr.github.io/3DHealth/shared/assets/kyh_logo_final.png" alt="KYH logo" />
+        </div>
         <h2>KYH</h2>
         <div class="full-name">Know Your Health</div>
         <p>
           Build a clear picture of your health across diagnostics, diet, and daily routine — then get practical next steps. All in under 10 minutes.
         </p>
-        <a class="card-action" href="https://deshvenkateshblr.github.io/3DHealth/" target="_blank" rel="noopener">
+        <span class="card-action">
           Open app
           <span aria-hidden="true">→</span>
-        </a>
-      </article>
+        </span>
+      </a>
 
       <!-- KYF — Finances -->
       <article class="card disabled" aria-disabled="true">
@@ -279,9 +291,7 @@
         <div class="card-icon" aria-hidden="true">💰</div>
         <h2>KYF</h2>
         <div class="full-name">Know Your Finances</div>
-        <p>
-          Map income, expenses, goals, and risk in one private dashboard. Plan with clarity — no spreadsheets required.
-        </p>
+        <p>Map income, expenses, goals, and risk in one private dashboard. Plan with clarity — no spreadsheets required.</p>
         <span class="card-action">Coming soon</span>
       </article>
 
@@ -291,9 +301,7 @@
         <div class="card-icon" aria-hidden="true">🚗</div>
         <h2>KYA</h2>
         <div class="full-name">Know Your Automobile</div>
-        <p>
-          Track maintenance, costs, service history, and ownership insights for every vehicle you care about.
-        </p>
+        <p>Track maintenance, costs, service history, and ownership insights for every vehicle you care about.</p>
         <span class="card-action">Coming soon</span>
       </article>
 
@@ -303,9 +311,7 @@
         <div class="card-icon" aria-hidden="true">🥗</div>
         <h2>KYFood</h2>
         <div class="full-name">Know Your Food</div>
-        <p>
-          Understand what you eat — macros, micros, patterns, and simple improvements tailored to your goals.
-        </p>
+        <p>Understand what you eat — macros, micros, patterns, and simple improvements tailored to your goals.</p>
         <span class="card-action">Coming soon</span>
       </article>
 
@@ -315,11 +321,100 @@
         <div class="card-icon" aria-hidden="true">🐾</div>
         <h2>KYP</h2>
         <div class="full-name">Know Your Pet</div>
-        <p>
-          Health logs, routines, vet notes, and care reminders for the animals that share your life.
-        </p>
+        <p>Health logs, routines, vet notes, and care reminders for the animals that share your life.</p>
         <span class="card-action">Coming soon</span>
       </article>
+
+      <!-- KYW — Wardrobe -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">👔</div>
+        <h2>KYW</h2>
+        <div class="full-name">Know Your Wardrobe</div>
+        <p>Catalog what you own, discover what you actually wear, and build a more intentional closet — privately.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYJ — Jewelry -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">💎</div>
+        <h2>KYJ</h2>
+        <div class="full-name">Know Your Jewelry</div>
+        <p>Record pieces, materials, provenance, and care notes so your collection stays organized and protected.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYE — Exercise -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">🏋️</div>
+        <h2>KYE</h2>
+        <div class="full-name">Know Your Exercise</div>
+        <p>Track workouts, recovery, progressive overload, and how movement actually feels for your body.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYPers — Personality -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">🧠</div>
+        <h2>KYPers</h2>
+        <div class="full-name">Know Your Personality</div>
+        <p>Explore traits, strengths, and patterns with private assessments and reflections that stay on your device.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYAP — Ayurvedic Prakriti -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">🌿</div>
+        <h2>KYAP</h2>
+        <div class="full-name">Know Your Ayurvedic Prakriti</div>
+        <p>Discover your constitution (Vata, Pitta, Kapha) and receive personalized lifestyle guidance rooted in classical Ayurveda.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYG — Garden -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">🌱</div>
+        <h2>KYG</h2>
+        <div class="full-name">Know Your Garden</div>
+        <p>Log plants, soil, seasons, pests, and harvests so your garden grows smarter every year.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYHome — Home -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">🏠</div>
+        <h2>KYHome</h2>
+        <div class="full-name">Know Your Home</div>
+        <p>Track maintenance, appliances, energy use, inventory, and everything that keeps your living space running smoothly.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYSkin — Skin -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">✨</div>
+        <h2>KYSkin</h2>
+        <div class="full-name">Know Your Skin</div>
+        <p>Log routines, products, reactions, and patterns so you understand what actually works for your skin.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
+      <!-- KYTravel — Travel -->
+      <article class="card disabled" aria-disabled="true">
+        <span class="card-badge badge-soon">Coming soon</span>
+        <div class="card-icon" aria-hidden="true">✈️</div>
+        <h2>KYTravel</h2>
+        <div class="full-name">Know Your Travel</div>
+        <p>Preferences, packing lists, past trips, and insights that make every journey smoother and more personal.</p>
+        <span class="card-action">Coming soon</span>
+      </article>
+
     </div>
 
     <p class="privacy-note">
