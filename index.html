@@ -138,30 +138,36 @@
     }
 
     .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 1.1rem;
-      background: var(--accent-dim);
       overflow: hidden;
+    }
+
+    /* Neutral background that works with the transparent logo */
+    .card-icon.logo-bg {
+      background: #e8f5ee;               /* soft mint / off-white */
+      border: 1px solid rgba(61, 214, 140, 0.35);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
     .card-icon img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 4px;
+      padding: 7px;
     }
 
+    /* Keep the disabled cards looking muted */
     .card.disabled .card-icon {
-      background: rgba(92, 99, 112, 0.2);
+      background: rgba(92, 99, 112, 0.25);
       filter: grayscale(0.4);
     }
-
     .card-badge {
       position: absolute;
       top: 1.1rem;
@@ -269,9 +275,9 @@
     <div class="grid">
 
       <!-- KYH — Live -->
-      <a class="card live" href="https://deshvenkateshblr.github.io/3DHealth/" target="_blank" rel="noopener">
+      <a class="card live" href=https://vividnova.com/3DHealth/" target="_blank" rel="noopener">
         <span class="card-badge badge-live">Live</span>
-        <div class="card-icon">
+        <div class="card-icon logo-bg">
           <img src="https://deshvenkateshblr.github.io/3DHealth/shared/assets/kyh_logo_final.png" alt="KYH logo" />
         </div>
         <h2>KYH</h2>
