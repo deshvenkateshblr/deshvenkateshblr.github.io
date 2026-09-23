@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Know Your Life — Personal Apps</title>
-  <meta name="description" content="A suite of private, browser-based personal apps. Start with KYH — Know Your Health." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Know Your Life — Personal Apps</title>
+    <meta name="description" content="A suite of private, browser-based personal apps. Live now: KYH (Know Your Health) and KYT (Know Your Travel)." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
       --bg: #0f1115;
       --surface: #1a1d24;
       --surface-hover: #22262f;
@@ -21,37 +21,37 @@
       --disabled: #5c6370;
       --card-radius: 16px;
       --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-    }
+      }
 
-    * {
+      * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
+      }
 
-    body {
+      body {
       font-family: "Inter", system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       line-height: 1.5;
       background-image:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 214, 140, 0.12), transparent),
-        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(100, 140, 255, 0.06), transparent);
-    }
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 214, 140, 0.12), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(100, 140, 255, 0.06), transparent);
+      }
 
-    .container {
+      .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2.5rem 1.5rem 4rem;
-    }
+      }
 
-    header {
+      header {
       text-align: center;
       margin-bottom: 3rem;
-    }
+      }
 
-    .logo {
+      .logo {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
@@ -61,37 +61,37 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 1.25rem;
-    }
+      }
 
-    .logo-dot {
+      .logo-dot {
       width: 8px;
       height: 8px;
       background: var(--accent);
       border-radius: 50%;
       box-shadow: 0 0 12px var(--accent);
-    }
+      }
 
-    h1 {
+      h1 {
       font-size: clamp(1.85rem, 4vw, 2.6rem);
       font-weight: 700;
       letter-spacing: -0.03em;
       margin-bottom: 0.75rem;
-    }
+      }
 
-    .subtitle {
+      .subtitle {
       font-size: 1.1rem;
       color: var(--text-muted);
       max-width: 520px;
       margin: 0 auto;
-    }
+      }
 
-    .grid {
+      .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.25rem;
-    }
+      }
 
-    .card {
+      .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--card-radius);
@@ -103,41 +103,41 @@
       overflow: hidden;
       text-decoration: none;
       color: inherit;
-    }
+      }
 
-    .card.live {
+      .card.live {
       border-color: rgba(61, 214, 140, 0.35);
       background: linear-gradient(145deg, var(--surface) 0%, rgba(61, 214, 140, 0.06) 100%);
       cursor: pointer;
-    }
+      }
 
-    .card.live:hover {
+      .card.live:hover {
       transform: translateY(-4px);
       border-color: var(--accent);
       background: var(--surface-hover);
       box-shadow: var(--shadow);
-    }
+      }
 
-    .card.disabled {
+      .card.disabled {
       opacity: 0.72;
       cursor: not-allowed;
-    }
+      }
 
-    .card.disabled::after {
+      .card.disabled::after {
       content: "";
       position: absolute;
       inset: 0;
       background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 8px,
-        rgba(0, 0, 0, 0.03) 8px,
-        rgba(0, 0, 0, 0.03) 16px
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(0, 0, 0, 0.03) 8px,
+      rgba(0, 0, 0, 0.03) 16px
       );
       pointer-events: none;
-    }
+      }
 
-    .card-icon {
+      .card-icon {
       width: 52px;
       height: 52px;
       border-radius: 14px;
@@ -147,28 +147,28 @@
       font-size: 1.5rem;
       margin-bottom: 1.1rem;
       overflow: hidden;
-    }
+      }
 
-    /* Neutral background that works with the transparent logo */
-    .card-icon.logo-bg {
+      /* Neutral background that works with the transparent logo */
+      .card-icon.logo-bg {
       background: #e8f5ee;               /* soft mint / off-white */
       border: 1px solid rgba(61, 214, 140, 0.35);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    }
+      }
 
-    .card-icon img {
+      .card-icon img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       padding: 7px;
-    }
+      }
 
-    /* Keep the disabled cards looking muted */
-    .card.disabled .card-icon {
+      /* Keep the disabled cards looking muted */
+      .card.disabled .card-icon {
       background: rgba(92, 99, 112, 0.25);
       filter: grayscale(0.4);
-    }
-    .card-badge {
+      }
+      .card-badge {
       position: absolute;
       top: 1.1rem;
       right: 1.1rem;
@@ -178,39 +178,39 @@
       text-transform: uppercase;
       padding: 0.25rem 0.55rem;
       border-radius: 999px;
-    }
+      }
 
-    .badge-live {
+      .badge-live {
       background: var(--accent-dim);
       color: var(--accent);
-    }
+      }
 
-    .badge-soon {
+      .badge-soon {
       background: rgba(92, 99, 112, 0.25);
       color: var(--disabled);
-    }
+      }
 
-    .card h2 {
+      .card h2 {
       font-size: 1.15rem;
       font-weight: 600;
       margin-bottom: 0.2rem;
       letter-spacing: -0.01em;
-    }
+      }
 
-    .card .full-name {
+      .card .full-name {
       font-size: 0.85rem;
       color: var(--text-muted);
       margin-bottom: 0.75rem;
-    }
+      }
 
-    .card p {
+      .card p {
       font-size: 0.9rem;
       color: var(--text-muted);
       flex-grow: 1;
       margin-bottom: 1.25rem;
-    }
+      }
 
-    .card-action {
+      .card-action {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
@@ -218,219 +218,226 @@
       font-weight: 600;
       color: var(--accent);
       transition: gap 0.2s ease;
-    }
+      }
 
-    .card.live:hover .card-action {
+      .card.live:hover .card-action {
       gap: 0.6rem;
-    }
+      }
 
-    .card.disabled .card-action {
+      .card.disabled .card-action {
       color: var(--disabled);
-    }
+      }
 
-    .privacy-note {
+      .privacy-note {
       text-align: center;
       margin-top: 3rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--text-muted);
-    }
+      }
 
-    .privacy-note strong {
+      .privacy-note strong {
       color: var(--text);
       font-weight: 500;
-    }
+      }
 
-    footer {
+      footer {
       text-align: center;
       margin-top: 2rem;
       font-size: 0.8rem;
       color: var(--disabled);
-    }
+      }
 
-    @media (max-width: 600px) {
+      @media (max-width: 600px) {
       .container {
-        padding: 1.75rem 1rem 3rem;
+      padding: 1.75rem 1rem 3rem;
       }
       header {
-        margin-bottom: 2rem;
+      margin-bottom: 2rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <span class="logo-dot"></span>
-        Know Your Life
-      </div>
-      <h1>Your private personal apps</h1>
-      <p class="subtitle">
-        Browser-based tools that stay on your device.  Built through the collaboration of human insight and AI, No accounts, no tracking, no data leaves your browser.
-      </p>
-    </header>
-
-    <div class="grid">
-
-      <!-- KYH — Live -->
-      <a class="card live" href=https://vividnova.com/3DHealth/ target="_blank" rel="noopener">
-        <span class="card-badge badge-live">Live</span>
-        <div class="card-icon logo-bg">
-          <img src="https://deshvenkateshblr.github.io/3DHealth/shared/assets/kyh_logo_final.png" alt="KYH logo" />
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Know Your Life
         </div>
-        <h2>KYH</h2>
-        <div class="full-name">Know Your Health</div>
-        <p>
-          Build a clear picture of your health across diagnostics, diet, and daily routine — then get practical next steps. All in under 10 minutes.
+        <h1>Your private personal apps</h1>
+        <p class="subtitle">
+          Browser-based tools that stay on your device. Built through the collaboration of human insight and AI. No accounts, no tracking, no data leaves your browser.
         </p>
-        <span class="card-action">
-          Open app
-          <span aria-hidden="true">→</span>
-        </span>
-      </a>
+      </header>
 
-      <!-- KYF — Finances -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">💰</div>
-        <h2>KYF</h2>
-        <div class="full-name">Know Your Finances</div>
-        <p>Map income, expenses, goals, and risk in one private dashboard. Plan with clarity — no spreadsheets required.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+      <div class="grid">
 
-      <!-- KYA — Automobile -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🚗</div>
-        <h2>KYA</h2>
-        <div class="full-name">Know Your Automobile</div>
-        <p>Track maintenance, costs, service history, and ownership insights for every vehicle you care about.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYH — Live -->
+        <a class="card live" href="https://vividnova.com/3DHealth/" target="_blank" rel="noopener">
+          <span class="card-badge badge-live">Live</span>
+          <div class="card-icon logo-bg">
+            <img src="https://deshvenkateshblr.github.io/3DHealth/shared/assets/kyh_logo_final.png" alt="KYH logo" />
+          </div>
+          <h2>KYH</h2>
+          <div class="full-name">Know Your Health</div>
+          <p>
+            Build a clear picture of your health across diagnostics, diet, and daily routine — then get practical next steps. All in under 10 minutes.
+          </p>
+          <span class="card-action">
+            Open app
+            <span aria-hidden="true">→</span>
+          </span>
+        </a>
 
-      <!-- KYFood -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🥗</div>
-        <h2>KYFood</h2>
-        <div class="full-name">Know Your Food</div>
-        <p>Understand what you eat — macros, micros, patterns, and simple improvements tailored to your goals.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYT — Live -->
+        <a class="card live" href="https://vividnova.com/KYT/" target="_blank" rel="noopener">
+          <span class="card-badge badge-live">Live</span>
+          <div class="card-icon logo-bg">
+            <img src="KYT.jpg" alt="KYT logo" />
+          </div>
+          <h2>KYT</h2>
+          <div class="full-name">Know Your Travel</div>
+          <p>
+            Manage your travel plans, itineraries, reservations, and activities in one private dashboard. Stay organized on every trip.
+          </p>
+          <span class="card-action">
+            Open app
+            <span aria-hidden="true">→</span>
+          </span>
+        </a>
 
-      <!-- KYP — Pet -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🐾</div>
-        <h2>KYP</h2>
-        <div class="full-name">Know Your Pet</div>
-        <p>Health logs, routines, vet notes, and care reminders for the animals that share your life.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYF — Finances -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">💰</div>
+          <h2>KYF</h2>
+          <div class="full-name">Know Your Finances</div>
+          <p>Map income, expenses, goals, and risk in one private dashboard. Plan with clarity — no spreadsheets required.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYW — Wardrobe -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">👔</div>
-        <h2>KYW</h2>
-        <div class="full-name">Know Your Wardrobe</div>
-        <p>Catalog what you own, discover what you actually wear, and build a more intentional closet — privately.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYA — Automobile -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🚗</div>
+          <h2>KYA</h2>
+          <div class="full-name">Know Your Automobile</div>
+          <p>Track maintenance, costs, service history, and ownership insights for every vehicle you care about.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYJ — Jewelry -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">💎</div>
-        <h2>KYJ</h2>
-        <div class="full-name">Know Your Jewelry</div>
-        <p>Record pieces, materials, provenance, and care notes so your collection stays organized and protected.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYFood -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🥗</div>
+          <h2>KYFood</h2>
+          <div class="full-name">Know Your Food</div>
+          <p>Understand what you eat — macros, micros, patterns, and simple improvements tailored to your goals.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYE — Exercise -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🏋️</div>
-        <h2>KYE</h2>
-        <div class="full-name">Know Your Exercise</div>
-        <p>Track workouts, recovery, progressive overload, and how movement actually feels for your body.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYP — Pet -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🐾</div>
+          <h2>KYP</h2>
+          <div class="full-name">Know Your Pet</div>
+          <p>Health logs, routines, vet notes, and care reminders for the animals that share your life.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYPers — Personality -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🧠</div>
-        <h2>KYPers</h2>
-        <div class="full-name">Know Your Personality</div>
-        <p>Explore traits, strengths, and patterns with private assessments and reflections that stay on your device.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYW — Wardrobe -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">👔</div>
+          <h2>KYW</h2>
+          <div class="full-name">Know Your Wardrobe</div>
+          <p>Catalog what you own, discover what you actually wear, and build a more intentional closet — privately.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYAP — Ayurvedic Prakriti -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🌿</div>
-        <h2>KYAP</h2>
-        <div class="full-name">Know Your Ayurvedic Prakriti</div>
-        <p>Discover your constitution (Vata, Pitta, Kapha) and receive personalized lifestyle guidance rooted in classical Ayurveda.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYJ — Jewelry -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">💎</div>
+          <h2>KYJ</h2>
+          <div class="full-name">Know Your Jewelry</div>
+          <p>Record pieces, materials, provenance, and care notes so your collection stays organized and protected.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYG — Garden -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🌱</div>
-        <h2>KYG</h2>
-        <div class="full-name">Know Your Garden</div>
-        <p>Log plants, soil, seasons, pests, and harvests so your garden grows smarter every year.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYE — Exercise -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🏋️</div>
+          <h2>KYE</h2>
+          <div class="full-name">Know Your Exercise</div>
+          <p>Track workouts, recovery, progressive overload, and how movement actually feels for your body.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYHome — Home -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">🏠</div>
-        <h2>KYHome</h2>
-        <div class="full-name">Know Your Home</div>
-        <p>Track maintenance, appliances, energy use, inventory, and everything that keeps your living space running smoothly.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYPers — Personality -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🧠</div>
+          <h2>KYPers</h2>
+          <div class="full-name">Know Your Personality</div>
+          <p>Explore traits, strengths, and patterns with private assessments and reflections that stay on your device.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYSkin — Skin -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">✨</div>
-        <h2>KYSkin</h2>
-        <div class="full-name">Know Your Skin</div>
-        <p>Log routines, products, reactions, and patterns so you understand what actually works for your skin.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYAP — Ayurvedic Prakriti -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🌿</div>
+          <h2>KYAP</h2>
+          <div class="full-name">Know Your Ayurvedic Prakriti</div>
+          <p>Discover your constitution (Vata, Pitta, Kapha) and receive personalized lifestyle guidance rooted in classical Ayurveda.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
-      <!-- KYTravel — Travel -->
-      <article class="card disabled" aria-disabled="true">
-        <span class="card-badge badge-soon">Coming soon</span>
-        <div class="card-icon" aria-hidden="true">✈️</div>
-        <h2>KYTravel</h2>
-        <div class="full-name">Know Your Travel</div>
-        <p>Preferences, packing lists, past trips, and insights that make every journey smoother and more personal.</p>
-        <span class="card-action">Coming soon</span>
-      </article>
+        <!-- KYG — Garden -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🌱</div>
+          <h2>KYG</h2>
+          <div class="full-name">Know Your Garden</div>
+          <p>Log plants, soil, seasons, pests, and harvests so your garden grows smarter every year.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
 
+        <!-- KYHome — Home -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">🏠</div>
+          <h2>KYHome</h2>
+          <div class="full-name">Know Your Home</div>
+          <p>Track maintenance, appliances, energy use, inventory, and everything that keeps your living space running smoothly.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
+
+        <!-- KYSkin — Skin -->
+        <article class="card disabled" aria-disabled="true">
+          <span class="card-badge badge-soon">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">✨</div>
+          <h2>KYSkin</h2>
+          <div class="full-name">Know Your Skin</div>
+          <p>Log routines, products, reactions, and patterns so you understand what actually works for your skin.</p>
+          <span class="card-action">Coming soon</span>
+        </article>
+
+      </div>
+
+      <p class="privacy-note">
+        <strong>Privacy first.</strong> Every app is designed to run entirely in your browser.
+        Nothing you enter is stored on a server or sent anywhere.
+      </p>
+
+      <footer>
+        Know Your Life · Personal tools that stay yours
+      </footer>
     </div>
-
-    <p class="privacy-note">
-      <strong>Privacy first.</strong> Every app is designed to run entirely in your browser.
-      Nothing you enter is stored on a server or sent anywhere.
-    </p>
-
-    <footer>
-      Know Your Life · Personal tools that stay yours
-    </footer>
-  </div>
-</body>
+  </body>
 </html>
