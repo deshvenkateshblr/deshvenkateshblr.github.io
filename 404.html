@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting...</title>
+
+    <script>
+        /*
+        ============================================================
+        VividNova URL Alias & Redirect Manager
+        ============================================================
+
+        HOW TO ADD AN ALIAS:
+
+        Format:
+            "incoming-url": "/destination-url"
+
+        Example:
+            "3dhealth": "/kyh"
+
+        Then ALL of these will redirect:
+
+            /3DHealth
+            /3dhealth
+            /3DHEALTH
+
+        to:
+
+            /kyh
+
+
+        MORE EXAMPLES:
+
+            "healthwizard": "/kyh",
+            "yoga": "/kyt",
+            "videos": "/sb-videos"
+
+        ============================================================
+        */
+
+        const aliases = {
+
+            /* =====================================================
+               PRIMARY APPS
+               ===================================================== */
+
+            "kyt": "/kyt",
+            "kyh": "/kyh",
+            "nbs": "/nbs",
+
+            /* =====================================================
+               FRIENDLY ALIASES
+               ===================================================== */
+
+            "3dhealth": "/kyh",
+            "healthwizard": "/kyh",
+            "health-wizard": "/kyh",
+
+            "knowledge": "/kyt",
+            "yoga": "/kyt",
+
+            "videos": "/sb-videos",
+            "sb": "/sb-videos"
+
+        };
+
+        (function () {
+
+            const path = window.location.pathname;
+
+            // Remove leading/trailing slashes
+            const slug = path
+                .replace(/^\/+|\/+$/g, "")
+                .toLowerCase();
+
+            // -----------------------------------------------------
+            // STEP 1
+            // Check explicit aliases first
+            // -----------------------------------------------------
+
+            if (aliases[slug]) {
+
+                const destination =
+                    aliases[slug] +
+                    window.location.search +
+                    window.location.hash;
+
+                window.location.replace(destination);
+                return;
+            }
+
+            // -----------------------------------------------------
+            // STEP 2
+            // Generic uppercase -> lowercase conversion
+            //
+            // Example:
+            // /KYT -> /kyt
+            // /NBS -> /nbs
+            // /SomeNewApp -> /somenewapp
+            // -----------------------------------------------------
+
+            if (path !== path.toLowerCase()) {
+
+                const destination =
+                    path.toLowerCase() +
+                    window.location.search +
+                    window.location.hash;
+
+                window.location.replace(destination);
+                return;
+            }
+
+        })();
+
+    </script>
+
+    <style>
+        body{
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        h1{
+            margin-bottom: 10px;
+        }
+
+        p{
+            color:#666;
+        }
+
+        a{
+            color:#0066cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>404 - Page Not Found</h1>
+
+    <p>
+        The page you're looking for doesn't exist.
+    </p>
+
+    <p>
+        <a href="/">Return to VividNova Home</a>
+    </p>
+
+</body>
+</html>
